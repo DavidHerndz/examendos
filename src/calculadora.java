@@ -5,6 +5,11 @@ public class calculadora {
     private double primerValor;
     private double segundoValor;
 
+    public calculadora(String marca, boolean escientifica) {
+        this.marca = marca;
+        this.escientifica = escientifica;
+    }
+
     public String getMarca() {
         return marca;
     }
@@ -33,19 +38,32 @@ public class calculadora {
         return segundoValor;
     }
 
-    public calculadora(String marca) {
-        this.marca = marca;
-    }
-
-    public calculadora(boolean escientifica) {
-        this.escientifica = escientifica;
-    }
 
     public void setSegundoValor(double segundoValor) {
         this.segundoValor = segundoValor;
 
+    }
 
+    double n1;
+    double n2;
+    double res;
+    char operacion;
+
+
+    public void Operacion(double n1, double n2, char operacion) {
+
+        this.n1 = n1;
+        this.n2 = n2;
+        this.operacion = operacion;
+    }
+
+
+    public void mostrarResultado(){
+
+        System.out.println(this.n1+" "+this.operacion+" "+this.n2+" = "+this.res);
 
 
     }
+
+
 }
